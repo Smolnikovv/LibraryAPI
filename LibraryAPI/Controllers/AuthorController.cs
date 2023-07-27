@@ -1,6 +1,8 @@
-﻿namespace LibraryAPI.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace LibraryAPI.Controllers
 {
-    public class AuthorController
+    public class AuthorController : Controller
     {
     }
 }

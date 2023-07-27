@@ -1,11 +1,9 @@
-﻿namespace LibraryAPI.Entities
+﻿namespace LibraryAPI.Models.Borrower
 {
-    public class Borrower
+    public class UpdateBorrowerDto
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime DateOfBirth { get; set; }
-
     }
 }

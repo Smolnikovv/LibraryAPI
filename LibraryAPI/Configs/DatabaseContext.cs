@@ -11,6 +11,7 @@ namespace LibraryAPI.Configs
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Borrower> Borrowers { get; set; }
+        public DbSet<BorrowedBook> BorrowedBooks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,6 +19,7 @@ namespace LibraryAPI.Configs
             PropAuthors(modelBuilder);
             PropBooks(modelBuilder);
             PropBorrowers(modelBuilder);
+            PropBorrowedBooks(modelBuilder);
         }
         private void PropGenres(ModelBuilder modelBuilder)
         {
@@ -56,6 +58,15 @@ namespace LibraryAPI.Configs
                 .IsRequired();
             modelBuilder.Entity<Borrower>()
                 .Property(x => x.Surname)
+                .IsRequired();
+        }
+        private void PropBorrowedBooks(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BorrowedBook>()
+                .Property(x => x.BookId)
+                .IsRequired();
+            modelBuilder.Entity<BorrowedBook>()
+                .Property(x => x.BorrowerId)
                 .IsRequired();
         }
     }
