@@ -2,5 +2,6 @@
 {
     public class UpdateGenreDto
     {
+        public string? Description { get; set; }
     }
 }

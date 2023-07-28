@@ -2,7 +2,7 @@
 {
     public class UpdateBorrowedBookDto
     {
-        public int BookId { get; set; }
-        public int BorrowerId { get; set; }
+        public int? BookId { get; set; }
+        public int? BorrowerId { get; set; }
     }
 }

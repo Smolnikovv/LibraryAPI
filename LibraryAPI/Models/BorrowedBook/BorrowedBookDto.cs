@@ -1,8 +1,10 @@
-﻿namespace LibraryAPI.Models.BorrowedBook
+﻿using LibraryAPI.Models.Borrower;
+using LibraryAPI.Models.Book;
+namespace LibraryAPI.Models.BorrowedBook
 {
     public class BorrowedBookDto
     {
-        public int BookId { get; set; }
-        public int BorrowerId { get; set; }
+        public BorrowerDto Borrower { get; set; }
+        public List<BookDto> Books { get; set; }
     }
 }
