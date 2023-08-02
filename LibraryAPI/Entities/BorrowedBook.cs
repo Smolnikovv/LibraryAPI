@@ -1,4 +1,6 @@
-﻿namespace LibraryAPI.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LibraryAPI.Entities
 {
     public class BorrowedBook
     {

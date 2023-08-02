@@ -63,6 +63,8 @@ namespace LibraryAPI.Configs
         private void PropBorrowedBooks(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BorrowedBook>()
+                .HasNoKey();
+            modelBuilder.Entity<BorrowedBook>()
                 .Property(x => x.BookId)
                 .IsRequired();
             modelBuilder.Entity<BorrowedBook>()
